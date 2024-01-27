@@ -11,16 +11,17 @@ class Location
 {
     public :
         int _autoindex;
-        int cgi_status;
         std::string  _name_Location;
         std::string  _root;
         int _upload;
         char *upload_path;
         char *index;
         char *_return;
+        int cgi_status;
         std::map<std::string, std::string> cgi;
         std::vector<std::string> _allow_methods;
         Location(std::string location);
+        ~Location(){}
 };
 
 class one_server
@@ -33,7 +34,7 @@ class one_server
         std::map<std::string, std::string>  error_page;
         
         std::vector<class Location>         _location;
-    
+        one_server(){};
         one_server(std::string string_to_pars);
 };
 

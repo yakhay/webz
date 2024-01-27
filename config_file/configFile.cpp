@@ -262,7 +262,6 @@ Location::Location(std::string location)
     _name_Location = location.substr(begn, end - begn);
     location = cut_and_paste(location, begn, end);
     _root = initialisation_param(location,"root", 1);
-    //index = initialisation_param(location,"index :", 0);
     if (location.find(" index ") != std::string::npos)
         index = strdup(initialisation_param(location," index ",0).c_str());
     else
@@ -278,12 +277,12 @@ Location::Location(std::string location)
     _autoindex = 0;
     _upload= 0;
     cgi_status = 0;
+    if (initialisation_param(location,"cgi_status", 1) == "on")
+        cgi_status = 1;
     if (initialisation_param(location,"autoindex", 1) == "on")
         _autoindex = 1;
     if (initialisation_param(location,"upload", 1) == "on")
         _upload= 1;
-    if (initialisation_param(location,"cgi_status", 1) == "on")
-        cgi_status = 1;
     position = location.find("allow_methods");
     position_end = location.find(";" ,position);
     line = location.substr(position, position_end + 1 - position);

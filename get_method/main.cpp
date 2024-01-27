@@ -67,7 +67,7 @@ int main(int c, char **v)
     std::cout<<"-------------"<<std::endl;
     try
     {
-        //memset(buffer, 0, 2048 + 1);
+        memset(buffer, 0, 2048 + 1);
         x = read(client_socket, buffer, 2048);
         do
         {

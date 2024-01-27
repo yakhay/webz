@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   getMethod.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yakhay <yakhay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wbouwach <wbouwach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 18:40:54 by wbouwach          #+#    #+#             */
-/*   Updated: 2024/01/12 16:51:16 by yakhay           ###   ########.fr       */
+/*   Updated: 2024/01/19 15:36:59 by wbouwach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@
 #include <filesystem>
 
 
-void get_method(request &req, manyServer *server, int newsockfd);
+void get_method(request &req, manyServer *server, int newsockfd, int idx);
 #endif
